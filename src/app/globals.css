@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #D2E3FC;
+  --color-primary-dark: #a3c4f5;
+  --color-navy: #0a1f3d;
+  --color-navy-light: #132d50;
+  --color-accent: #e67e22;
+  --color-accent-dark: #d35400;
+  --color-charcoal: #2c3e50;
+  --color-gray-light: #f8f9fa;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    color: var(--color-charcoal);
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-accent text-white font-semibold rounded-lg
+           hover:bg-accent-dark transition-all duration-300 ease-in-out
+           focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg
+           hover:bg-white hover:text-navy transition-all duration-300 ease-in-out
+           focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3 border-2 border-accent text-accent font-semibold rounded-lg
+           hover:bg-accent hover:text-white transition-all duration-300 ease-in-out
+           focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  }
+
+  /* Glassmorphism buttons for hero */
+  .btn-glass-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 font-semibold rounded-xl text-lg
+           backdrop-blur-md border border-accent/50 bg-accent/90 text-white
+           hover:bg-accent hover:border-accent hover:shadow-lg hover:shadow-accent/25
+           transition-all duration-300 ease-in-out
+           focus:outline-none focus:ring-2 focus:ring-white/50;
+  }
+
+  .btn-glass-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 font-semibold rounded-xl text-lg
+           backdrop-blur-md border border-white/30 bg-white/10 text-white
+           hover:bg-white/20 hover:border-white/50 hover:shadow-lg
+           transition-all duration-300 ease-in-out
+           focus:outline-none focus:ring-2 focus:ring-white/50;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-navy mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-charcoal/80 max-w-3xl mx-auto;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-lg p-6 md:p-8 transition-all duration-300;
+  }
+
+  .card:hover {
+    @apply shadow-xl -translate-y-1;
+  }
+
+  /* Dark gradient overlay for hero video readability */
+  .gradient-overlay {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.70) 50%,
+      rgba(0, 0, 0, 0.85) 100%
+    );
+  }
+
+  .credential-card {
+    @apply bg-white border-2 border-primary rounded-xl p-6 md:p-8 text-center
+           hover:border-accent hover:shadow-lg transition-all duration-300;
+  }
+
+  /* Parallax scroll effect wrapper */
+  .parallax-wrapper {
+    @apply will-change-transform;
+    transform: translateZ(0);
+  }
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Video fade-in */
+.hero-video {
+  opacity: 0;
+  animation: videoFadeIn 1.5s ease-out forwards;
+}
+
+@keyframes videoFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
