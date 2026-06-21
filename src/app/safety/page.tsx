@@ -96,7 +96,7 @@ export default function SafetyPage() {
               className="relative"
             >
               <img
-                src="https://images.unsplash.com/photo-1566576912323-bcb22f7dc6c2?w=800&q=80"
+                src="/images/safety-compliance.jpg"
                 alt="Semi truck on highway"
                 className="rounded-xl shadow-2xl w-full h-auto"
                 loading="lazy"

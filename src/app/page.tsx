@@ -373,8 +373,7 @@ export default function HomePage() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage:
-              'url("https://images.unsplash.com/photo-1566576912323-bcb22f7dc6c2?w=1920&q=80")',
+            backgroundImage: 'url("/images/cta-highway.jpg")',
           }}
         >
           <div className="absolute inset-0 gradient-overlay" />

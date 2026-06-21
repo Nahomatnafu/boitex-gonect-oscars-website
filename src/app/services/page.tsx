@@ -38,8 +38,7 @@ const services = [
       "Urgent shipment response",
       "Flexible pickup and delivery",
     ],
-    image:
-      "https://images.unsplash.com/photo-1566576912323-bcb22f7dc6c2?w=800&q=80",
+    image: "/images/services-hotshot.jpg",
   },
   {
     id: "freight",
