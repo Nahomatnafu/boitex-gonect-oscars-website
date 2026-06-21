@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "@/assets/boitex_logo.png";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -39,16 +41,21 @@ export default function Navbar() {
       <div className="container-max px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex flex-col">
-            <span className={`text-xl md:text-2xl font-bold font-poppins transition-colors duration-300 ${
+          <Link href="/" className="flex items-center gap-3" aria-label="BOITEX & GONECT Enterprises LLC home">
+            <span className="relative w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden ring-2 ring-white/70 shadow-md bg-white shrink-0">
+              <Image
+                src={logo}
+                alt="BOITEX & GONECT Enterprises LLC logo"
+                fill
+                sizes="56px"
+                className="object-cover"
+                priority
+              />
+            </span>
+            <span className={`text-lg md:text-xl font-bold font-display tracking-tight transition-colors duration-300 ${
               scrolled ? "text-navy" : "text-white"
             }`}>
               BOITEX & GONECT
-            </span>
-            <span className={`text-xs tracking-widest uppercase transition-colors duration-300 ${
-              scrolled ? "text-accent" : "text-primary"
-            }`}>
-              Enterprises LLC
             </span>
           </Link>
 

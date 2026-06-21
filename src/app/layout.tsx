@@ -1,26 +1,20 @@
 import type { Metadata } from "next";
-import { Inter, Poppins, Montserrat } from "next/font/google";
+import { Space_Grotesk, Plus_Jakarta_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-poppins",
-  display: "swap",
-});
-
-const montserrat = Montserrat({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-montserrat",
+  variable: "--font-space-grotesk",
+  display: "swap",
+});
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-jakarta",
   display: "swap",
 });
 
@@ -46,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable} ${montserrat.variable}`}>
+    <html lang="en" className={`${spaceGrotesk.variable} ${plusJakarta.variable}`}>
       <body className="font-sans antialiased bg-white">
         <Navbar />
         <main className="min-h-screen">{children}</main>

@@ -227,7 +227,7 @@ export default function AboutPage() {
             <p className="text-accent font-semibold tracking-widest text-sm uppercase mb-4">
               Our Mission
             </p>
-            <blockquote className="text-2xl md:text-3xl lg:text-4xl font-bold font-poppins leading-tight text-primary">
+            <blockquote className="text-2xl md:text-3xl lg:text-4xl font-bold font-display leading-tight text-primary">
               &ldquo;Our mission is to provide dependable, safe, and efficient
               transportation solutions while building long-term relationships
               through exceptional service, reliability, and professionalism.&rdquo;

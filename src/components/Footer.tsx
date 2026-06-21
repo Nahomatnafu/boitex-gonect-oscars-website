@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <h3 className="text-xl font-bold font-poppins mb-1">
+            <h3 className="text-xl font-bold font-display mb-1">
               BOITEX & GONECT
             </h3>
             <p className="text-primary text-sm tracking-widest uppercase mb-4">
